@@ -1,22 +1,22 @@
 function validateEmptyValues() {
 
-    var txtEmail = document.getElementById("txtEmail");
-    var txtUsername = document.getElementById("txtUsername");
-    var txtPassword = document.getElementById("txtPassword");
+    var txtEmail = document.getElementById("txtEmail").value;
+    var txtUsername = document.getElementById("txtUsername").value;
+    var txtPassword = document.getElementById("txtPassword").value;
 
     var appendError = "";
-    if (txtEmail = "") {
+    if (txtEmail == "") {
         appendError = "email";
 
     }
-    if (txtUsername = "") {
+    if (txtUsername == "") {
         if (appendError != "") {
             appendError = appendError + "and";
         }
         appendError = appendError + "Username";
 
     }
-    if (txtPassword = "") {
+    if (txtPassword == "") {
         if (appendError != "") {
             appendError = appendError + "and";
         }
