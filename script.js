@@ -23,6 +23,7 @@ function validateEmptyValues() {
         appendError = appendError + "password";
 
     }
+    //test comment
     if (appendError != "") {
         appendError = appendError + "cannot be empty";
         alert(appendError);
