@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic table using array and js </title>
+</head>
+
+<body>
+    <div id="table"></div>
+    <script type="text/javascript">
+
+        var studentsList = [
+            [1, "Siddhartha joshi", "Mnr", 9868709539],
+            [2, "john doe", "Middle of nowhere", 9885858968],
+            [3, "ammy", "washinton", 7854589666]
+
+        ];
+
+        var my_table = document.createElement('table');
+        my_table.border = '100';
+
+        var tr_head = document.createElement('tr');
+        var td_sno = document.createElement('td');
+        var td_name = document.createElement('td');
+        var td_address = document.createElement('td');
+        var td_phone = document.createElement('td');
+        td_sno.appendChild(document.createTextNode("S.N."));
+        td_name.appendChild(document.createTextNode("Name"));
+        td_address.appendChild(document.createTextNode("Address"));
+        td_phone.appendChild(document.createTextNode("Phone"));
+        tr_head.appendChild(td_sno);
+        tr_head.appendChild(td_name);
+        tr_head.appendChild(td_address);
+        tr_head.appendChild(td_phone);
+
+
+        my_table.appendChild(tr_head);
+
+        for (i = 0; i < studentsList.length; i++) {
+            var tr = document.createElement('tr');
+            for (j = 0; j < studentsList[i].length; j++) {
+                var td = document.createElement('td')
+                td.appendChild(document.createTextNode(studentsList[i][j]));
+                tr.appendChild(td)
+            }
+
+            my_table.appendChild(tr);
+        }
+        document.getElementById("table").appendChild(my_table);
+
+
+    </script>
+</body>
+
+</html>

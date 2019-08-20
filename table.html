@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table using list and js</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var studentsList = [
+            { "SNo": 1, "Name": "Siddhartha joshi", "Address": "Mnr", "Phone": 9868709539 },
+            { "SNo": 2, "Name": "john doe", "Address": "Middle of nowhere", "Phone": 9885858968 },
+            { "SNo": 3, "Name": "ammy", "Address": "washinton", "Phone": 7854589666 }
+
+        ];
+        var myTable = "<table border='100'><tr><td>S.N.</td><td>Name</td><td>Address</td><td>Phone</td></tr>";
+        for (var i = 0; i < studentsList.length; i++) {
+            myTable += "<tr><td>" + studentsList[i].SNo + "</td><td>" + studentsList[i].Name + "</td><td>" + studentsList[i].Address + "</td><td>" + studentsList[i].Phone + "</td></tr>";
+        }
+        document.write(myTable);
+    </script>
+</body>
+
+</html>
