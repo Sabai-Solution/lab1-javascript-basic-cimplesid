@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Clock</title>
+	
+</head>
+<body style="background:red;">
+	
+	<div id="clock" style=" font-size: 100px;     position: absolute;top: 50%;  left: 50%; transform: translateX(-50%) translateY(-50%);color: azure" onload="getTimer()"></div>
+
+<script type="text/javascript" >
+function getTimer(){
+    var date = new Date();
+    var hour = date.getHours(); 
+    var minutes = date.getMinutes(); 
+    var second = date.getSeconds(); 
+    var session = "AM";
+    
+    if(hour == 0){
+        hour = 12;
+    }
+ if(hour==12){
+        session = "PM";
+
+}
+    if(hour > 12){
+        hour = hour - 12;
+        session = "PM";
+    }
+    
+    hour = (hour < 10) ? "0" + hour : hour;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    second = (second < 10) ? "0" + second : second;
+    
+    var time = hour + ":" + minutes + ":" + second + " " + session;
+    document.getElementById("clock").innerText = time;
+    document.getElementById("clock").textContent = time;
+    
+    setTimeout(getTimer, 1000);
+    
+}
+
+getTimer();
+</script>
+</body>
+</html>

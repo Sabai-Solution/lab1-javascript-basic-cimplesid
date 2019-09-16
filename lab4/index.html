@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>JavaScript Lab 4</title>
+	</head>
+	<body>
+	<h1>JavaScript Basics</h1>
+	<script type="text/javascript">
+		onerror = exfoerr;
+		function exfoerr(msg,url,line){
+			alert(msg+";"+url+";"+line)
+		}
+		function display(){
+			alertneeded("Click to proceed !!")
+		}
+		
+		function show_alert(){
+			alert("Hello I am Alert");
+		}
+		function show_confirm(){
+			var r = confirm("Press a Buttton. Messsage Appear here");
+			if (r == true){
+				alert("You Pressed OK !");
+			}else{
+				alert("You Pressed Cancel !")
+			}
+		}
+		function show_prompt(){
+			try{
+					var rate= prompt("Rate us out of 10","10");
+					alert("you rated" +rate+"/10");
+				}
+			catch(err){
+					alert(err);
+				
+			}
+		}
+	</script>
+	<h2>Alert </h2>
+	<input type="button"  onclick="show_alert()" name="alert" value="Alert">
+
+	<h2>Confirmation </h2>
+	<input type="button" onclick="show_confirm()" name="confirm" value="Confirm">
+
+	<h2>Prompt </h2>
+	<input type="button" name="prompt" value="Prompt" onclick="show_prompt()">
+
+	<h2>Error handling </h2>
+	<input type="button" name="error" value="Error handling" onclick="display()">
+
+	</body>
+	</html>	
